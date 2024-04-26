@@ -21,3 +21,10 @@ pocitani s bitama, stupne na radiany a naopak
 Kalkulacka bude zvladat i jine funkce, nez jen scitani, odcitani, nasobeni, deleni,
 jako napriklad.: goniometricke funkce(sinus, cosinus, tangens, cotangens), umocnovani, odmocnovani, zlomky,
 sumu, pouzit predchozi vysledek pri novem vypoctu, MAYBE save files apod.
+
+
+
+
+
+Co dela cudlik:
+
