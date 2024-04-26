@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+#include "funkce/funkce.h"
+
 int main() {
 
     // Initialize SDL
@@ -43,8 +45,6 @@ int main() {
         (SDL_Rect){190, 200, 60, 40},
     };  
 
-    
-
     SDL_Event event;
     bool quit = false;
     while (!quit){
@@ -56,7 +56,7 @@ int main() {
 
         Uint32 state_m = SDL_GetMouseState(NULL, NULL);
         // Set render color to blue
-        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
         // Clear the window with the render color
         SDL_RenderClear(renderer);
 
@@ -85,6 +85,7 @@ int main() {
                 SDL_SetRenderDrawColor(renderer, 100, 100, 100, 255);
                 SDL_RenderFillRect(renderer, &button[i]);
             }
+
         }
 
         // Update the screen
