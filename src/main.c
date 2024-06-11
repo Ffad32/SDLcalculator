@@ -32,6 +32,7 @@ int main() {
 
     const Uint8* state = SDL_GetKeyboardState(NULL);
 
+    // buttons
     SDL_Rect button[10] = {
         (SDL_Rect){50, 350, 60, 40},
         (SDL_Rect){50, 300, 60, 40},
@@ -60,7 +61,7 @@ int main() {
         // Clear the window with the render color
         SDL_RenderClear(renderer);
 
-        // Render
+        // checks if the mouse is over the button
         for (int i = 0; i < 10; i++) {
             int x, y;
             SDL_GetMouseState(&x, &y);
@@ -68,6 +69,7 @@ int main() {
                 SDL_SetRenderDrawColor(renderer, 50, 50, 50, 255);
                 SDL_RenderFillRect(renderer, &button[i]);
 
+        // checks if the button is clicked
                     static bool isFKeyPressed = false;
                     if(state_m & SDL_BUTTON(SDL_BUTTON_LEFT) && !isFKeyPressed){
                         isFKeyPressed = true;

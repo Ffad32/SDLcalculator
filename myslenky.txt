@@ -1,30 +1,20 @@
-"vedecka graficka kalkulacka"
+SDL Calculator
 
-scan vstupu, kontrola vstupu
-pointery = vstupy, funkce
-struktry = tlacitka(graficka)
-SDL(grafika)
-soubory = pamet
-bitove operace? (napr.: array vstupu, treba pro vypocet sumy)
-
-
-popis:
 Projekt bude vyuzivat grafickou knihovnu SDL2 pro graficke zobrazeni kalkulacky,
 
 kalkulacka bude fungovat na bazi interaktivnich tlacitek,
+
 jejichz pouziti bude ovladano misi
 
-pamet vysledku po vypnuti: kalkulacka bude vysledek ukladat pro dalsi pouziti behem jizdy programu
-
-pocitani s bitama, stupne na radiany a naopak
+pamet vysledku po vypnuti: kalkulacka bude vysledek ukladat pro dalsi pouziti za behu jizdy programu
 
 Kalkulacka bude zvladat i jine funkce, nez jen scitani, odcitani, nasobeni, deleni,
-jako napriklad.: goniometricke funkce(sinus, cosinus, tangens, cotangens), umocnovani, odmocnovani, zlomky,
-sumu, pouzit predchozi vysledek pri novem vypoctu, MAYBE save files apod.
-
-
-
-
-
-Co dela cudlik:
-
+jako napriklad:
+ goniometricke funkce(sin, cos, tan, cotan),
+ prevod jejich vyslednych hodnot(stupne na radiany a naopak),
+ take goniometricke funkce s vypoctem uhlu/radianu ze zadane hodnoty(arc sin, arc cosin,...)
+ umocnovani, odmocnovani, zlomky, absolutni hodnoty cisel, pocitani s komplexnimi cisly,
+ sumu, pouzit predchozi vysledek pri novem vypoctu, pi, desetina cisla,
+ Bitové operace: OR, AND, NEG, XOR. Posun
+ Převody mezi čísl. soustavami: DEC, HEX,BIN
+ Práce se závorkami.
