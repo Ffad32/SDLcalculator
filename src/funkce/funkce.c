@@ -1,8 +1,10 @@
 #include "funkce.h"
 
 // addition
-void add() {
+void add(int a, int b,int *result) {
+    *result= a + b;
     printf("add\n");
+    return;
 }
 
 // subtraction

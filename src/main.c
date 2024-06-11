@@ -5,8 +5,11 @@
 #include "funkce/windowgen.h"
 #include "funkce/funkce.h"
 #include "funkce/buttons.h"
-
+int finalsorage = 0;
 int main() {
+    int storage[50]= {0,0,0,0,0,0,0,0,0,0,0,0};
+    int storagenum = 0;
+
     Pack pack = {NULL,NULL};
     const Uint8* state = SDL_GetKeyboardState(NULL);
     // Initialize SDL
@@ -77,7 +80,8 @@ int main() {
                         SDL_SetRenderDrawColor(pack.renderer, 255, 0, 0, 255);
                         SDL_RenderFillRect(pack.renderer, &button[i]);
                         printf("Button %d clicked\n", i);
-                        buttons(i);
+                        storage[storagenum] = buttons(i, storage[storagenum],&storagenum);
+                        printf("storage: %d\n", storage[storagenum]);
                         }
 
                         if(!state_m & SDL_BUTTON(SDL_BUTTON_LEFT)){
@@ -97,5 +101,6 @@ int main() {
 
     }
     end(&pack);
+    printf("storage: %d\n", storage[storagenum]);
     return 0;
 }
