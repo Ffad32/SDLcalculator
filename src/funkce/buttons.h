@@ -1,8 +1,14 @@
 #ifndef BUTTONS_H
 #define BUTTONS_H
 #include <stdio.h>
-
-int buttons(int buttonnum,int storage,int *storagenum)
+enum operators{
+    plus = 13,
+    minus = 14,
+    multiply = 15,
+    devide = 16,
+    eaqual = 17
+};
+int buttons(int buttonnum,int storage,int *storagenum,int *key)
 {
     switch (buttonnum)
     {
@@ -66,13 +72,20 @@ int buttons(int buttonnum,int storage,int *storagenum)
         break;
     case 13:
         printf("Button +\n");
+        key = plus;
         *storagenum += 1;
         break;
     case 14:
-
+        *key = minus;
+        *storagenum += 1;
         break;
     case 15:
-
+        *key = multiply;
+        *storagenum += 1;
+        break;
+    case 16:
+        *key = devide;
+        *storagenum += 1;
         break;
     default:
         break;

@@ -9,7 +9,7 @@ int finalsorage = 0;
 int main() {
     int storage[50]= {0,0,0,0,0,0,0,0,0,0,0,0};
     int storagenum = 0;
-
+    int key[50];
     Pack pack = {NULL,NULL};
     const Uint8* state = SDL_GetKeyboardState(NULL);
     // Initialize SDL
@@ -80,7 +80,7 @@ int main() {
                         SDL_SetRenderDrawColor(pack.renderer, 255, 0, 0, 255);
                         SDL_RenderFillRect(pack.renderer, &button[i]);
                         printf("Button %d clicked\n", i);
-                        storage[storagenum] = buttons(i, storage[storagenum],&storagenum);
+                        storage[storagenum] = buttons(i, storage[storagenum],&storagenum, &key[storagenum]);
                         printf("storage: %d\n", storage[storagenum]);
                         }
 
@@ -92,6 +92,23 @@ int main() {
             } else {
                 SDL_SetRenderDrawColor(pack.renderer, 100, 100, 100, 255);
                 SDL_RenderFillRect(pack.renderer, &button[i]);
+            }
+            if (i == 17) {
+                // evaluation 
+                for(int i= 0; i < 50; i++){
+                    if(i == 15 || i == 16 ){
+                        if(storage[i] == 15){
+                            finalsorage = storage[i-1] * storage[i];
+                            printf("finalsorage: %d\n", finalsorage);
+                        }
+                        if(storage[i] == 16){
+                            finalsorage = storage[i-1] / storage[i];
+                            printf("finalsorage: %d\n", finalsorage);
+                        }
+                    }
+                    }
+                
+
             }
 
         }
